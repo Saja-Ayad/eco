@@ -44,7 +44,6 @@ html {
     -o-tab-size: 4;
     tab-size: 4;
     /* 3 */
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* 4 */
 }
 
@@ -132,7 +131,6 @@ code,
 kbd,
 samp,
 pre {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     /* 1 */
     font-size: 1em;
     /* 2 */
@@ -746,5 +744,300 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .a:hover {
-    background-color: #85E4A5;
+    background-color: #16a34a;
+}
+
+* {
+    font-family: 'Tajawal', sans-serif;
+}
+
+.flipcard {
+    text-align: center;
+}
+
+body .container {
+    padding-top: 1%;
+    padding-bottom: 4%;
+}
+
+body h1 {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+body .box2 {
+    max-height: 350px;
+    height: 350px;
+    background-color: #eeeeee;
+    background-size: cover;
+    background-position: center center;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+body .box2 .hover {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    transition: all 0.5s ease-in-out;
+    padding: 2em 2em;
+}
+
+body .box2 .hover h1 {
+    color: #ffffff;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+body .box2 .hover p {
+    color: #ffffff;
+}
+
+body .box2:hover {
+    filter: grayscale(100%);
+}
+
+body .box2:hover .hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+body .box {
+    position: relative;
+    max-height: 255px;
+    height: 255px;
+    background-color: #eeeeee;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body .box .content-hover2 {
+    transform: scale(0, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #d32222;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 2em 2em;
+}
+
+body .box .content-hover2 h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+body .box .content-hover2 p {
+    color: #ffffff;
+}
+
+body .box .content-hover {
+    transform: scale(0, 0);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #252525;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 2em 2em;
+}
+
+body .box .content-hover h1 {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+body .box .content-hover p {
+    color: #ffffff;
+}
+
+body .box .content {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+body .box .content img {
+    width: 160px;
+}
+
+body .box .content p {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -2em;
+}
+
+body .box:hover>.content-hover,
+body .box:hover>.content-hover2 {
+    transform: scale(1, 1);
+    cursor: pointer;
+}
+
+body .box-tech {
+    position: relative;
+    display: flex;
+    width: 10[x];
+    border: 1px solid#252525;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2em;
+}
+
+body .box-tech .content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-top: 5em;
+    transition: all 0.2s ease-in-out;
+}
+
+body .box-tech .content img {
+    width: 140px;
+    transition: all 0.2s ease-in-out;
+    filter: grayscale(100%) brightness(75%);
+}
+
+body .box-tech .content p {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #8E8E8E;
+    text-transform: uppercase;
+    margin-top: 0em;
+    transition: all 0.2s ease-in-out;
+}
+
+body .box-tech .content .desc {
+    transform: scale(0, 0);
+    transition: all 0.2s ease-in-out;
+}
+
+body .box-tech .content .desc .line {
+    border-top: 1px solid #000000;
+    width: 0px;
+    margin-top: 0em;
+    margin-bottom: 1em;
+    transition: all 0.2s ease-in-out;
+}
+
+body .box-tech .content .desc p {
+    font-size: 1em !important;
+    font-weight: 600;
+    text-transform: none;
+    margin-top: 0em;
+}
+
+body .box-tech:hover .content {
+    padding-top: 0em;
+    cursor: pointer;
+}
+
+body .box-tech:hover .content img {
+    width: 60px;
+    filter: none;
+}
+
+body .box-tech:hover .content p {
+    color: #111111;
+}
+
+body .box-tech:hover .content .desc {
+    display: block !important;
+    transform: scale(1, 1);
+}
+
+body .box-tech:hover .content .desc .line {
+    width: 50px;
+}
+
+.flip {
+    position: relative;
+}
+
+.flip>.front,
+.flip>.back {
+    display: block;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+}
+
+.flip>.front {
+    transform: rotateY(0deg);
+}
+
+.flip>.back {
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(-180deg);
+}
+
+.flip:hover>.front {
+    transform: rotateY(180deg);
+}
+
+.flip:hover>.back {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.flip.flip-vertical>.back {
+    transform: rotateX(-180deg);
+}
+
+.flip.flip-vertical:hover>.front {
+    transform: rotateX(180deg);
+}
+
+.flip.flip-vertical:hover>.back {
+    transform: rotateX(0deg);
+}
+
+.flip {
+    position: relative;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 1em;
+    width: 550px;
+}
+
+.flip>.front,
+.flip>.back {
+    display: block;
+    color: white;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 220px;
+    padding: 1em 2em;
+    background-color: #16a34a;
+    border-radius: 10px;
+}
+
+.flip>.front p,
+.flip>.back p {
+    font-size: 0.9125rem;
+    line-height: 160%;
+    color: #999;
 }
